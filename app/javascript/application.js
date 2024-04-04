@@ -3,7 +3,4 @@ import "@hotwired/turbo-rails"
 import "controllers"
 
 import "js/bootstrap.bundle.min"
-import "js/glightbox.min"
-import "isotope.pkgd.min"
-import "validate"
 import "main"
