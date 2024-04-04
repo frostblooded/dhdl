@@ -23,5 +23,16 @@ module Dhdl
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    # Add additional assets to the asset load path
+    Rails.application.config.assets.paths += [
+      Rails.root.join('vendor', 'assets').to_s
+    ]
+
+    # Precompile additional assets.
+    # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
+    Rails.application.config.assets.precompile += [
+      Rails.root.join('vendor/assets/*').to_s,
+    ]
   end
 end
