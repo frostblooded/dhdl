@@ -1,0 +1,21 @@
+# [START cloudrun_rails_cloudbuild]
+steps:
+  - id: "build image"
+    name: "gcr.io/cloud-builders/docker"
+    entrypoint: "bash"
+    args:
+      [
+        "-c",
+        "docker build --build-arg MASTER_KEY=$$RAILS_KEY -t gcr.io/${PROJECT_ID}/${_SERVICE_NAME} . ",
+      ]
+
+  - id: "push image"
+    name: "gcr.io/cloud-builders/docker"
+    args: ["push", "gcr.io/${PROJECT_ID}/${_SERVICE_NAME}"]
+
+substitutions:
+  _SERVICE_NAME: rails-dhdl
+
+images:
+  - "gcr.io/${PROJECT_ID}/${_SERVICE_NAME}"
+# [END cloudrun_rails_cloudbuild]
