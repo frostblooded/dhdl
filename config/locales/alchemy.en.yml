@@ -2,7 +2,7 @@ en:
   alchemy:
     # Translations for page layout names
     page_layout_names:
-      index: Homepage
+      index: Index
 
     # Translations for element names
     element_names:

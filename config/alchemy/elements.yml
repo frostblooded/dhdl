@@ -17,13 +17,3 @@
       type: Richtext
       default: :article_text
       hint: true
-
-- name: homepage
-  unique: true
-  ingredients:
-    - role: headline
-      type: Text
-    - role: picture
-      type: Picture
-    - role: text
-      type: Richtext

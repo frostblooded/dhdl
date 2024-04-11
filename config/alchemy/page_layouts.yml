@@ -4,5 +4,3 @@
 
 - name: index
   unique: true
-  elements: [homepage]
-  autogenerate: [homepage]
