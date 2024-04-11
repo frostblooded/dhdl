@@ -69,3 +69,7 @@ end
 gem "jquery-rails", "~> 4.6"
 
 gem "bootstrap-sass", "~> 3.4"
+
+gem "alchemy_cms", "~> 7.1"
+
+gem "alchemy-devise", "~> 7.1"
