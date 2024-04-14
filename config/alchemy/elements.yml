@@ -17,3 +17,9 @@
       type: Richtext
       default: :article_text
       hint: true
+
+- name: blog_page_content
+  unique: true
+  ingredients:
+    - role: content
+      type: Richtext

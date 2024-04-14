@@ -4,3 +4,11 @@
 
 - name: index
   unique: true
+
+- name: blog_index
+  unique: true
+  elements: [article]
+
+- name: blog_page
+  elements: [blog_page_content]
+  autogenerate: [blog_page_content]

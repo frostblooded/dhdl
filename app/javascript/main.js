@@ -5,8 +5,7 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
-
-(function() {
+window.addEventListener('load', () => {
   "use strict";
 
   /**
@@ -70,7 +69,7 @@
     let offset = header.offsetHeight
 
     if (!header.classList.contains('header-scrolled')) {
-      offset -= 20
+      offset -= 60
     }
 
     let elementPos = select(el).offsetTop
@@ -111,7 +110,6 @@
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
   }
-
   /**
    * Mobile nav toggle
    */
@@ -149,14 +147,13 @@
     }
   }, true)
 
+
   /**
    * Scroll with ofset on page load with hash links in the url
    */
-  window.addEventListener('load', () => {
-    if (window.location.hash) {
-      if (select(window.location.hash)) {
-        scrollto(window.location.hash)
-      }
+  if (window.location.hash) {
+    if (select(window.location.hash)) {
+      scrollto(window.location.hash)
     }
-  });
-})()
+  }
+});

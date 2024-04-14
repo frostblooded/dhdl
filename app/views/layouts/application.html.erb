@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="<%= @page.language_code %>">
   <head>
+    <title>DHDL</title>
+
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" charset="utf-8">
+    <meta charset="utf-8">
+    <link href="<%= image_path 'favicon.png' %>" rel="icon">
+    <link href="<%= image_path 'apple-touch-icon.png' %>" rel="apple-touch-icon">
+
+    <%= javascript_include_tag 'application' %>
+
     <%= render "alchemy/pages/meta_data" %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbo-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all' %>
   </head>
 
   <body>
+    <%= render 'header' %>
     <%= yield %>
     <%= render "alchemy/edit_mode" %>
   </body>

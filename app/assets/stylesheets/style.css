@@ -344,6 +344,7 @@ section {
   bottom: 0;
   background: rgba(7, 56, 57, 0.9);
   transition: 0.3s;
+  z-index: 99;
 }
 
 .navbar-mobile .mobile-nav-toggle {
